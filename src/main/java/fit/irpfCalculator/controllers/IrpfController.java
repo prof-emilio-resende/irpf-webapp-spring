@@ -17,7 +17,7 @@ import fit.irpfCalculator.view.PersonViewModel;
 @RequestMapping("/irpf")
 public class IrpfController { 
     // curl -X POST -H 'Content-Type: application/json' -d '{"totalSalary": 5000, "dependentsNumber": 1}' http://localhost:5000/irpf/person
-    // curl -X POST -H 'Content-Type: application/json' -d '{"totalSalary": 5000, "dependentsNumber": 1}' https://sheltered-stream-19464.herokuapp.com/irpf/person
+    // curl -X POST -H 'Content-Type: application/json' -d '{"totalSalary": 5000, "dependentsNumber": 1}' https://vast-castle-69333.herokuapp.com/irpf/person
     @PostMapping("/person")
     public Person createPerson(@RequestBody PersonViewModel p) {
         return new Person(p.getTotalSalary(), p.getDependentsNumber());
